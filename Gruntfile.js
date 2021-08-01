@@ -1,0 +1,24 @@
+module.exports = function(grunt){
+    grunt.initConfig({
+        concat:{
+            js:{
+                src:['folder/*.js'],
+                dest:'build/one.js'
+            },
+            css:{
+                src:['folder/*.css'],
+                dest:'build/one.css'
+            },
+        },
+        uglify:{
+            build:{
+                src:'build/one.js',
+                dest:'build/onee.js'
+            },
+                src:'build/one.css',
+                dest:'build/onee.css'
+        }
+    });
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+}
